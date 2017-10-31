@@ -1,0 +1,32 @@
+{
+  "name": "followme",
+  "version": "1.0.0",
+  "description": "api to send email by request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonemillan/bsm_api.git"
+  },
+  "keywords": [
+    "api",
+    "follow",
+    "email"
+  ],
+  "author": "Jhon E. Millan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhonemillan/bsm_api/issues"
+  },
+  "homepage": "https://github.com/jhonemillan/bsm_api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.3.1",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7"
+  }
+}
