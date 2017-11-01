@@ -6,7 +6,7 @@ var path = require('path');
 var logger = require('morgan');
 
 var app = express();
-var port = process.env.PORT;
+var port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
@@ -63,5 +63,5 @@ function SendCoords(lat, lon) {
 
 
 app.listen(port,()=>{
-    console.log('listening on port ' + port.toString());
+    console.log('listening on port ' + port);
 })
