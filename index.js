@@ -20,6 +20,14 @@ app.get('*',function(req, res){
     res.sendFile(path.join(__dirname,'index.html'));
 });
 
+app.get('/',function(req, res){    
+    res.sendFile(path.join(__dirname,'index.html'));
+});
+
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
+
 app.post('/track', (req, res)=>{
     SendCoords(req.body.lat, req.body.lon);
     res.end();
