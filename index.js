@@ -63,10 +63,6 @@ function SendCoords(lat, lon) {
 }
 
 
-
-app.post('track', )
-
-
 app.listen(port,()=>{
     console.log('listening on port ' + port.toString());
 })
