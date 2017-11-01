@@ -6,7 +6,7 @@ var path = require('path');
 var logger = require('morgan');
 
 var app = express();
-var port = process.env.port | 3000;
+var port = process.env.PORT || 3000;
 
 
 app.use(logger('dev'));
@@ -30,13 +30,13 @@ function SendCoords(lat, lon) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'jhonemillan@gmail.com', // Your email id
-            pass: '94063633' // Your password
+            user: 'nodeveloperapi@gmail.com', // Your email id
+            pass: '2017devel' // Your password
         }
     });
 
     var mailOptions = {
-        from: 'jhonemillan@gmail.com', // sender address
+        from: 'nodeveloperapi@gmail.com', // sender address
         to: 'jhonemillan@gmail.com', // list of receivers
         subject: 'Coords', // Subject line
         text: 'lat: ' + lat + ' lon: ' + lon
