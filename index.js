@@ -6,8 +6,7 @@ var path = require('path');
 var logger = require('morgan');
 
 var app = express();
-var port = process.env.PORT || 3000;
-
+var port = process.env.PORT;
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
