@@ -46,8 +46,10 @@ function SendCoords(lat, lon) {
         from: 'nodeveloperapi@gmail.com', // sender address
         to: 'jhonemillan@gmail.com', // list of receivers
         subject: 'Coords', // Subject line
-        text: 'lat: ' + lat + ' lon: ' + lon
-        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+        //text: 'lat: ' + lat + ' lon: ' + lon
+        //text: '<a href="https://www.google.com/maps/?q="' + lat + ','+lon+'">Locate Me</a>'
+        //html: "<a href='https://www.google.com/maps/?q='" + lat + ','+lon+">Locate Me</a>"
+        html: '<a href="https://www.google.com/maps/?q=' + lat + ',' + lon + '> Locate me</a>'
     };
     
     transporter.sendMail(mailOptions, function(error, info){
