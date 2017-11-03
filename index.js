@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var path = require('path');
 var logger = require('morgan');
-//var cors = require('cors');
+var cors = require('cors');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -12,7 +12,7 @@ var port = process.env.PORT || 3000;
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
-//app.use(cors());
+app.use(cors());
 
 app.set('view engine','html');
 
@@ -30,7 +30,7 @@ app.get('/favicon.ico', function(req, res) {
     res.status(204);
 });
 
-app.post('/track', (req, res)=>{
+app.post('/track',cors(), (req, res)=>{
     SendCoords(req.body.lat, req.body.lon);
     res.end();
 })
