@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var path = require('path');
 var logger = require('morgan');
-var cors = require('cors');
+//var cors = require('cors');
 
 var app = express();
 var port = process.env.PORT || 3000;
